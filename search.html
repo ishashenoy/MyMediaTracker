@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MyMediaTracker</title>
+
+    <!--Importing Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Linking Stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="import" style="display: none;">
+        <label for="file">Select .JSON file to upload:</label>
+        <input type="file" id="file" accept=".json">
+        <button id="import-close" onclick="hide('import')">X</div>
+    </div>
+    <header>
+        <div id="logo">
+            <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
+            <p>MyMediaTracker</p>
+        </div>
+        <div style="display: flex; gap: 0.2em;">
+            <button class="search-top" onclick="show('import')">
+                <p>+</p>
+                <p>Import Data</p>
+            </button>
+            <button class="search-top" onclick="exportData()">
+                <p>+</p>
+                <p>Export Data</p>
+            </button>
+        </div>
+    </header>
+    <div id="main-container">
+        <div id="nav-container">
+            <nav>
+                <a class="tab" href="/index.html">
+                    <img style="width:18px" src="/assets/img/home.png">
+                    <p>Home</p>
+                </a>
+                <a class="tab" href="/search.html">
+                    <img style="width:18px" src="/assets/img/search.png">
+                    <p>Search</p>
+                </a>
+                <a class="tab" href="/list.html">
+                    <img style="width:18px" src="/assets/img/folder.png">
+                    Your Media
+                </a>
+            </nav>
+        </div>
+        <div id="content-container">
+            <div class="reminder"> ▶ Remember: <i>Export Data</i> to your device and <i>Import Data</i> next time you use the site to save your lists</div>
+            <h1>Search</h1>
+            <div id="search-bar">
+                <select name="search-filter" id="search-filter-select">
+                    <option value="anime">Anime</option>
+                    <option value="manga">Manga</option>
+                    <option value="tv">TV Shows</option>
+                </select>
+                <input id="search-input" type="text" placeholder="Enter a media name..." aria-autocomplete="list">
+                <button id="search-button" onclick="fetchData()">
+                    <img style="width:17px" src="/assets/img/search.png">
+                </button>
+            </div>
+            <div id="search-results-container"></div>
+        </div>
+    </div>
+    <script src="search.js" defer></script>
+    <footer>created by <a href="https://github.com/ishashenoy">@ishashenoy</a></footer>
+</body>
+</html>

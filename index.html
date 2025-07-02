@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MyMediaTracker</title>
+
+    <!--Importing Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Linking Stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="import" style="display: none;">
+        <label for="file">Select .JSON file to upload:</label>
+        <input type="file" id="file" accept=".json">
+        <button id="import-close" onclick="hide('import')">X</div>
+    </div>
+    <header>
+        <div id="logo">
+            <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
+            <p>MyMediaTracker</p>
+        </div>
+        <div style="display: flex; gap: 0.2em;">
+            <button class="search-top" id="import-open" onclick="show('import')">
+                <p>+</p>
+                <p>Import Data</p>
+            </button>
+            <button class="search-top" onclick="exportData()">
+                <p>+</p>
+                <p>Export Data</p>
+            </button>
+        </div>
+    </header>
+    <div id="main-container">
+        <div class="home">
+            <div class="hero">
+                <div id="logo" style="scale: 2; margin-bottom: 1.5em;">
+                    <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
+                    <p>MyMediaTracker</p>
+                </div>
+                <nav>
+                    <a>
+                        <img style="width:22px" src="/assets/img/home.png">
+                        <!-- <p>Home</p> -->
+                    </a>
+                    <a href="/search.html">
+                        <img style="width:22px" src="/assets/img/search.png">
+                        <!-- <p>Search</p> -->
+                    </a>
+                    <a href="/list.html">
+                        <img style="width:22px" src="/assets/img/folder.png">
+                        <!-- <p>Your Media</p> -->
+                    </a>
+                </nav>
+                <div class="recommendations">
+                    <h2>Recommended Anime</h2>
+                    <div id="top-anime" class="top-container"></div>
+                    <!-- <h2>Recommended Manga</h2>
+                    <div id="top-manga" class="top-container"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" defer></script>
+    <footer>created by <a href="https://github.com/ishashenoy">@ishashenoy</a></footer>
+</body>
+</html>
