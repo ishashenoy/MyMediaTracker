@@ -13,17 +13,17 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body class="other-page">
     <div id="import" style="display: none;">
         <label for="file">Select .JSON file to upload:</label>
         <input type="file" id="file" accept=".json">
         <button id="import-close" onclick="hide('import')">X</div>
     </div>
     <header>
-        <div id="logo">
+        <a class="logo" href="/index.html">
             <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
             <p>MyMediaTracker</p>
-        </div>
+        </a>
         <div style="display: flex; gap: 0.2em;">
             <button class="search-top" onclick="show('import')">
                 <p>+</p>
@@ -35,37 +35,37 @@
             </button>
         </div>
     </header>
+    <div id="nav-container">
+        <nav>
+            <a class="tab" href="/index.html">
+                <img style="width:18px" src="/assets/img/home.png">
+                <p>Home</p>
+            </a>
+            <a class="tab" href="/search.html">
+                <img style="width:18px" src="/assets/img/search.png">
+                <p>Search</p>
+            </a>
+            <a class="tab">
+                <img style="width:18px" src="/assets/img/folder.png">
+                Your Media
+            </a>
+            <button class="tab link" onclick="openList(event, 'anime')"  id="defaultOpen">
+                <img style="width:18px" src="/assets/img/anime.png">
+                Anime
+            </button>
+            <button class="tab link" onclick="openList(event, 'manga')">
+                <img style="width:18px" src="/assets/img/manga.png">
+                Manga
+            </button>
+            <button class="tab link" onclick="openList(event, 'tv')">
+                <img style="width:18px" src="/assets/img/tv.png">
+                TV Shows
+            </button>
+        </nav>
+    </div>
     <div id="main-container">
-        <div id="nav-container">
-            <nav>
-                <a class="tab" href="/index.html">
-                    <img style="width:18px" src="/assets/img/home.png">
-                    <p>Home</p>
-                </a>
-                <a class="tab" href="/search.html">
-                    <img style="width:18px" src="/assets/img/search.png">
-                    <p>Search</p>
-                </a>
-                <a class="tab">
-                    <img style="width:18px" src="/assets/img/folder.png">
-                    Your Media
-                </a>
-                <button class="tab link" onclick="openList(event, 'anime')"  id="defaultOpen">
-                    <img style="width:18px" src="/assets/img/anime.png">
-                    Anime
-                </button>
-                <button class="tab link" onclick="openList(event, 'manga')">
-                    <img style="width:18px" src="/assets/img/manga.png">
-                    Manga
-                </button>
-                <button class="tab link" onclick="openList(event, 'tv')">
-                    <img style="width:18px" src="/assets/img/tv.png">
-                    TV Shows
-                </button>
-            </nav>
-        </div>
         <div id="content-container">
-            <div class="reminder"> ▶ Remember: <i>Export Data</i> to your device and <i>Import Data</i> next time you use the site to save your lists</div>
+            <div class="reminder"> 💭 Remember: <i>Export Data</i> to your device and <i>Import Data</i> next time you use the site to save your lists</div>
             <div id="anime" class="tabcontent">
                 <h1>Anime</h1>
                 <div class="list-container">
@@ -105,6 +105,6 @@
         </div>
     </div>
     <script src="list.js" defer></script>
-    <footer>created by <a href="https://github.com/ishashenoy">@ishashenoy</a></footer>
+    <footer>created by <a target="_blank" href="https://github.com/ishashenoy">@ishashenoy</a></footer>
 </body>
 </html>

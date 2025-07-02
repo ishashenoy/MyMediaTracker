@@ -6,12 +6,12 @@
     /*color: #1f2937; light*/
 }
 
-#logo img{
+.logo img{
     width: 1.2em;
     height: 100%;
 }
 
-#logo {
+.logo {
     display: flex;
     text-align: left;
     font-weight: 600;
@@ -20,14 +20,18 @@
     gap: 0.2em;
     /*color: #1f2937; light*/
     cursor: pointer;
+    text-decoration: none;
+}
+
+.hero .logo:hover{
+    scale: 1.2;
 }
 
 body{
     background-color: #1a1a1a;
-    display: grid; 
+    display: grid;
     height: 100%;
 }
-
 html{
     height: 100%;
 }
@@ -52,20 +56,14 @@ header{
 
 #main-container{
     margin-top: 60px;
-    height: calc(100%-60px);    
+    height: calc(100% - 60px);    
     display: flex;
-    position:relative;
+    /* position:relative; */
     backdrop-filter: blur(5px);
 }
 
 .home{
     display: grid;
-}
-
-#nav-container {
-    position: fixed;
-    height: 100%;
-    width: 20%;
 }
 
 .hero{
@@ -79,30 +77,36 @@ header{
     justify-items: center;
 }
 
+#nav-container {
+    position: fixed !important;
+    top: 60px;    
+    width: 20%;
+    z-index: 500;
+    height: 100%;
+}
+
 nav{
     background-color: #2d2d2d;
-    /*background-color: #f1f5f9; light*/
     border-radius: 10px;
     margin: 20px;
     margin-bottom:10px;
     padding: 10px;
-    height: 85vh;
+    height: 80%;
     box-shadow: 0px 0px 1px #53535382;
 }
 
-.hero nav{
+body.home-page .hero-nav {
     display: flex;
+    position: static;
     height: fit-content;
     width: fit-content;
 }
-.hero nav:hover{
-    display: flex;
-    height: fit-content;
-    width: fit-content;
+
+.hero-nav:hover{
     box-shadow: 0px 0px 1px #53535382;
 }
 
-.hero nav a{
+.hero-nav a{
     display: flex;
     width: fit-content;
     padding: 0.5em;
@@ -112,15 +116,17 @@ nav{
     scale: 1;
 }
 
-.hero nav a:hover{
+.hero-nav a:hover{
     scale: 1.1;
     rotate: 10deg;
     transition: all ease-in-out 0.3s;
 }
+
 .hero h1{
     font-size: 4em;
     margin-top: 2em;
     text-shadow: 0px 0px 1px #444444c4;
+    animation: puffIn;
 }
 
 .tab{
@@ -452,6 +458,7 @@ h2{
   width: 100vw;
   height: 100vh;
   z-index: 500;
+  display: none;
 }
 
 #import #file{
@@ -488,7 +495,7 @@ footer {
     position:fixed;
     bottom: 0px;
     padding:5px;
-    z-index: 100;
+    z-index: 501;
 }
 
 .top-container{

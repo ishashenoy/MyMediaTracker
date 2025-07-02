@@ -12,17 +12,17 @@
     <!--Linking Stylesheet-->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="other-page">
     <div id="import" style="display: none;">
         <label for="file">Select .JSON file to upload:</label>
         <input type="file" id="file" accept=".json">
-        <button id="import-close" onclick="hide('import')">X</div>
+        <button id="import-close" onclick="hide('import')">X</button>
     </div>
     <header>
-        <div id="logo">
+        <a class="logo" href="/index.html">
             <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
             <p>MyMediaTracker</p>
-        </div>
+        </a>
         <div style="display: flex; gap: 0.2em;">
             <button class="search-top" onclick="show('import')">
                 <p>+</p>
@@ -34,25 +34,25 @@
             </button>
         </div>
     </header>
+    <div id="nav-container">
+        <nav>
+            <a class="tab" href="/index.html">
+                <img style="width:18px" src="/assets/img/home.png">
+                <p>Home</p>
+            </a>
+            <a class="tab" href="/search.html">
+                <img style="width:18px" src="/assets/img/search.png">
+                <p>Search</p>
+            </a>
+            <a class="tab" href="/list.html">
+                <img style="width:18px" src="/assets/img/folder.png">
+                Your Media
+            </a>
+        </nav>
+    </div>
     <div id="main-container">
-        <div id="nav-container">
-            <nav>
-                <a class="tab" href="/index.html">
-                    <img style="width:18px" src="/assets/img/home.png">
-                    <p>Home</p>
-                </a>
-                <a class="tab" href="/search.html">
-                    <img style="width:18px" src="/assets/img/search.png">
-                    <p>Search</p>
-                </a>
-                <a class="tab" href="/list.html">
-                    <img style="width:18px" src="/assets/img/folder.png">
-                    Your Media
-                </a>
-            </nav>
-        </div>
         <div id="content-container">
-            <div class="reminder"> ▶ Remember: <i>Export Data</i> to your device and <i>Import Data</i> next time you use the site to save your lists</div>
+            <div class="reminder"> 💭 Remember: <i>Export Data</i> to your device and <i>Import Data</i> next time you use the site to save your lists</div>
             <h1>Search</h1>
             <div id="search-bar">
                 <select name="search-filter" id="search-filter-select">
@@ -69,6 +69,6 @@
         </div>
     </div>
     <script src="search.js" defer></script>
-    <footer>created by <a href="https://github.com/ishashenoy">@ishashenoy</a></footer>
+    <footer>created by <a target="_blank" href="https://github.com/ishashenoy">@ishashenoy</a></footer>
 </body>
 </html>

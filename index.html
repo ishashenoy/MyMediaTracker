@@ -12,14 +12,14 @@
     <!--Linking Stylesheet-->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
     <div id="import" style="display: none;">
         <label for="file">Select .JSON file to upload:</label>
         <input type="file" id="file" accept=".json">
         <button id="import-close" onclick="hide('import')">X</div>
     </div>
     <header>
-        <div id="logo">
+        <div class="logo">
             <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
             <p>MyMediaTracker</p>
         </div>
@@ -37,15 +37,11 @@
     <div id="main-container">
         <div class="home">
             <div class="hero">
-                <div id="logo" style="scale: 2; margin-bottom: 1.5em;">
+                <div class="logo" style="scale: 2; margin-bottom: 1.5em;">
                     <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
                     <p>MyMediaTracker</p>
                 </div>
-                <nav>
-                    <a>
-                        <img style="width:22px" src="/assets/img/home.png">
-                        <!-- <p>Home</p> -->
-                    </a>
+                <nav class="hero-nav">
                     <a href="/search.html">
                         <img style="width:22px" src="/assets/img/search.png">
                         <!-- <p>Search</p> -->
@@ -65,6 +61,6 @@
         </div>
     </div>
     <script src="index.js" defer></script>
-    <footer>created by <a href="https://github.com/ishashenoy">@ishashenoy</a></footer>
+    <footer>created by <a target="_blank" href="https://github.com/ishashenoy">@ishashenoy</a></footer>
 </body>
 </html>

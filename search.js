@@ -64,21 +64,21 @@ async function fetchData(){
             mediaUrl = "https://api.jikan.moe/v4/" + filter + "?q=" + mediaName +"&sfw=true";
         } else if(filter==="tv"){
             mediaUrl = "https://api.tvmaze.com/search/shows?q=" + mediaName ;
-        }
+        } 
 
         const response = await fetch(mediaUrl);
         if(!response.ok){
             throw new Error("could not fetch resource");
         }
 
-        const results = await response.json();
+        const result = await response.json();
 
         let mediaList;
         if (filter === "anime" || filter === "manga") {
-            mediaList = results.data;
+            mediaList = result.data;
         } else if (filter === "tv") {
-            mediaList = results;
-        }
+            mediaList = result;
+        } 
 
         console.log(mediaList);
 
@@ -148,7 +148,7 @@ async function fetchData(){
             imgEl.src = image;
             mediaCard.appendChild(imgEl);
 
-            let titleEl = document.createElement('p');
+            let titleEl = document.createElement('a');
             titleEl.classList.add("title");
             titleEl.href = url;
             titleEl.innerText = title;
