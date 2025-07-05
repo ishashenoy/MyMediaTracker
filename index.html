@@ -6,7 +6,6 @@
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-
     <!--Importing Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,40 +25,32 @@
             <img src="/assets/img/favicon.png">
             <p>MyMediaTracker</p>
         </div>
-        <div class="search-top-container">
-            <button class="search-top" id="import-open" onclick="show('import')">
-                <p>+</p>
+        <div class="button-top-container">
+            <button class="button-top" id="import-open" onclick="show('import')">
                 <p>Import Data</p>
             </button>
-            <button class="search-top" onclick="exportData()">
-                <p>+</p>
+            <button class="button-top" onclick="exportData()">
                 <p>Export Data</p>
             </button>
         </div>
     </header>
     <div id="main-container">
-        <div class="home">
-            <div class="hero">
-                <div class="logo" style="scale: 2; margin-bottom: 1.5em;">
-                    <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
-                    <p>MyMediaTracker</p>
-                </div>
-                <nav class="hero-nav">
-                    <a href="/search.html">
-                        <img style="width:22px" src="/assets/img/search.png">
-                        <!-- <p>Search</p> -->
-                    </a>
-                    <a href="/list.html">
-                        <img style="width:22px" src="/assets/img/folder.png">
-                        <!-- <p>Your Media</p> -->
-                    </a>
-                </nav>
-                <div class="recommendations">
-                    <h2>Recommended Anime</h2>
-                    <div id="top-anime" class="top-container"></div>
-                    <!-- <h2>Recommended Manga</h2>
-                    <div id="top-manga" class="top-container"></div> -->
-                </div>
+        <div id="home">
+            <div class="title">
+                <img src="https://em-content.zobj.net/source/apple/419/cyclone_1f300.png">
+                <p>MyMediaTracker</p>
+            </div>
+            <nav>
+                <a href="/search.html">
+                    <img style="width:22px" src="/assets/img/search.png">
+                </a>
+                <a href="/list.html">
+                    <img style="width:22px" src="/assets/img/folder.png">
+                </a>
+            </nav>
+            <div class="recommendations">
+                <h2>Recommended Media</h2>
+                <div id="top-anime" class="top-container"></div>
             </div>
         </div>
     </div>

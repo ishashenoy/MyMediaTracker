@@ -30,6 +30,8 @@ function hide(elmnt){
     document.querySelectorAll('*').forEach(el => el.style.overflow = 'hidden');
 }
 
+
+
 let jsonData;
 
 document.getElementById("file").addEventListener("change", async function(event) {

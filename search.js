@@ -150,6 +150,7 @@ async function fetchData(){
 
             let titleEl = document.createElement('a');
             titleEl.classList.add("title");
+            titleEl.target = "_blank";
             titleEl.href = url;
             titleEl.innerText = title;
             mediaCard.appendChild(titleEl);

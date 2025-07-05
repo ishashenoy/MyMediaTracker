@@ -22,40 +22,37 @@
         <button id="import-close" onclick="hide('import')">X</button>
     </div>
     <header>
-        <a class="logo" href="/index.html">
+        <a class="logo" href="/index.html" style="text-decoration: none;">
             <img src="/assets/img/favicon.png">
             <p>MyMediaTracker</p>
         </a>
-        <div class="search-top-container">
-            <button class="search-top" onclick="show('import')">
-                <p>+</p>
-                <p>Import Data</p>
+        <div class="button-top-container">
+            <button class="button-top" onclick="show('import')">
+                <p>▲ Import Data</p>
             </button>
-            <button class="search-top" onclick="exportData()">
-                <p>+</p>
-                <p>Export Data</p>
+            <button class="button-top" onclick="exportData()">
+                <p>▼ Export Data</p>
             </button>
         </div>
     </header>
-    <div id="nav-container">
-        <nav>
-            <a class="tab" href="/index.html">
-                <img style="width:18px" src="/assets/img/home.png">
-                <p>Home</p>
-            </a>
-            <a class="tab" href="/search.html">
-                <img style="width:18px" src="/assets/img/search.png">
-                <p>Search</p>
-            </a>
-            <a class="tab" href="/list.html">
-                <img style="width:18px" src="/assets/img/folder.png">
-                Your Media
-            </a>
-        </nav>
-    </div>
     <div id="main-container">
+        <div class="nav-container">
+            <nav>
+                <a class="tab" href="/index.html">
+                    <img style="width:18px" src="/assets/img/home.png">
+                    <p>Home</p>
+                </a>
+                <a class="tab" href="/search.html">
+                    <img style="width:18px" src="/assets/img/search.png">
+                    <p>Search</p>
+                </a>
+                <a class="tab" href="/list.html">
+                    <img style="width:18px" src="/assets/img/folder.png">
+                    Your Media
+                </a>
+            </nav>
+        </div>
         <div id="content-container">
-            <div class="reminder"> 💭 Remember: <i>Export Data</i> to your device and <i>Import Data</i> next time you use the site to save your lists</div>
             <h1>Search</h1>
             <div id="search-bar">
                 <select name="search-filter" id="search-filter-select">
