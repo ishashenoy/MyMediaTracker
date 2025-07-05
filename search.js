@@ -64,7 +64,9 @@ async function fetchData(){
             mediaUrl = "https://api.jikan.moe/v4/" + filter + "?q=" + mediaName +"&sfw=true";
         } else if(filter==="tv"){
             mediaUrl = "https://api.tvmaze.com/search/shows?q=" + mediaName ;
-        } 
+        } else if(filter==="game"){
+            mediaUrl = mediaUrl = `https://api.rawg.io/api/games?key=309aa4424a8849b3870b737c2c710574&search=${mediaName}&page_size=20`;
+        }
 
         const response = await fetch(mediaUrl);
         if(!response.ok){
@@ -78,7 +80,9 @@ async function fetchData(){
             mediaList = result.data;
         } else if (filter === "tv") {
             mediaList = result;
-        } 
+        } else if (filter==="game"){
+            mediaList = result.results;
+        }
 
         console.log(mediaList);
 
@@ -104,6 +108,12 @@ async function fetchData(){
                 image = media.images.jpg.image_url;
                 year = media.year;
                 score = media.score;
+            } else if(filter==="game"){
+                title = media.name;
+                url = `https://rawg.io/games/${media.slug}`;
+                image = media.background_image;
+                year = media.released.substr(0, 4);
+                score = media.rating;
             }
 
             mediaCard.setAttribute("data-title",title);

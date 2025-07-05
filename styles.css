@@ -390,7 +390,7 @@ h1{
     background-color: #1a1a1a;
     border: 1px solid #404040;
     outline: none;
-    padding-left: 2.7rem;
+    padding-left: 4rem;
     width: 80%;
     margin-left: 3.75rem;
     display: flex;
@@ -416,7 +416,7 @@ h1{
     }
     #search-input{
         padding: 0.3rem;
-        padding-left: 3.5rem;
+        padding-left: 5rem;
     }
     #search-bar{
         justify-self: left;
@@ -536,6 +536,14 @@ h1{
 .list-container-heading p{
     border-right: 1px solid #b0b0b0;
     padding: 0.5rem;
+}
+
+#game .progress{
+    display: none;
+}
+
+#game .progressDiv{
+    display: none;
 }
 
 
